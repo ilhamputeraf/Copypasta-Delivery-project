@@ -19,7 +19,11 @@
 
     <nav class="flex flex-wrap items-center justify-between max-w-6xl mx-auto mt-10 py-2">
         <div class="flex items-center">
-            <img src="/Assets/logoproject.png" alt="Logo">
+            <picture>
+                <source srcset="/Assets/logoproject.png" media="(min-width: 1024px)" />
+                <source srcset="/Assets/logoproject.png" media="(max-width: 1023px)" />
+                <img src="/Assets/logoproject.png" alt="Logo" />
+            </picture>
         </div>
     
         <div class="lg:hidden flex items-center">
