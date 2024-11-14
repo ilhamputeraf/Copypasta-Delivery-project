@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body class="bg-indigo-50 font-['Poppins']">
 
@@ -41,6 +42,16 @@
             </div>
             <a href="#" class="text-base bg-indigo-950 text-white rounded-full font-semibold py-3 px-8 hover:bg-indigo-800">Sign in</a>
         </div>
+        <div class="flex items-center">
+            <div class="theme-toggle-container">
+              <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+              <label for="theme-toggle" class="theme-toggle-label">
+                <span class="theme-toggle-text light-text pl-6"><i class="ph ph-moon"></i></span>
+                <span class="theme-toggle-text dark-text pr-6"><i class="ph ph-sun"></i></span>
+                <span class="theme-toggle-slider"></span>
+              </label>
+            </div>
+          </div>       
     </nav>
 
     <div class="max-w-6xl mx-auto px-4 sm:px-10 py-12">
@@ -82,6 +93,7 @@
         </h3>
     </footer>
     
+
+    <script src="/script.js"></script>
 </body>
-<script src="/script.js"></script>
 </html>

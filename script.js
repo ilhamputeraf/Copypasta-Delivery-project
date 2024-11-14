@@ -1,43 +1,53 @@
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-const closeButton = document.getElementById('close-btn');
-const menuItems = document.querySelectorAll('#mobile-menu a');
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const closeButton = document.getElementById("close-btn");
+  const menuItems = document.querySelectorAll("#mobile-menu a");
 
-hamburger.addEventListener('click', () => {
-    mobileMenu.classList.remove('hidden'); 
-});
-
-closeButton.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden'); 
-});
-
-menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden'); 
+  if (hamburger && mobileMenu && closeButton) {
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.remove("hidden");
     });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const body = document.body;
+    closeButton.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
 
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme) {
-        body.classList.add(currentTheme);
+    menuItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  }
+
+  const themeToggle = document.getElementById("theme-toggle");
+  const body = document.body;
+  const gallerySection = document.getElementById("gallery");
+
+  const currentTheme = localStorage.getItem("theme");
+  if (currentTheme) {
+    body.classList.add(currentTheme);
+    themeToggle.checked = currentTheme === "dark";
+
+    if (currentTheme === "dark") {
+      gallerySection.style.backgroundImage =
+        "url('Assets/Screenshot from 2024-11-14 14-29-57.png')";
+    } else {
+      gallerySection.style.backgroundImage =
+        "url('Assets/Screenshot from 2024-11-09 00-34-42.png')";
     }
+  }
 
-    themeToggleButton.addEventListener('click', () => {
-        body.classList.toggle('dark');
-        
-        if (body.classList.contains('dark')) {
-            localStorage.setItem('theme', 'dark');
-            themeToggleButton.textContent = '🌞';
-        } else {
-            localStorage.removeItem('theme');
-            themeToggleButton.textContent = '🌙';
-        }
-    });
-});
-
-
-
+  themeToggle.addEventListener("change", () => {
+    if (themeToggle.checked) {
+      body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      gallerySection.style.backgroundImage =
+        "url('Assets/Screenshot from 2024-11-14 14-29-57.png')";
+    } else {
+      body.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      gallerySection.style.backgroundImage =
+        "url('Assets/Screenshot from 2024-11-09 00-34-42.png')";
+    }
+  });});

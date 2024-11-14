@@ -3,6 +3,14 @@ body.dark {
     color: white;
 }
 
+body.dark .dark-mode-image {
+    filter: grayscale(100%);
+}
+
+body.dark .gallery {
+    background-image: url('Assets/Screenshot from 2024-11-14 14-29-57.png');
+}
+
 .dark .bg-indigo-50 {
     background-color: #1e1e1e;
 }
@@ -26,14 +34,86 @@ body.dark {
 .dark .bg-indigo-950 {
     background-color: #555555;
 }
+
 .dark .border-indigo-800 {
     border-color: #555555;
 }
+
 .dark .bg-white {
     background-color: #444444;
 }
+
 .dark .bg-indigo-200 {
     background-color: #555555;
+}
+
+.theme-toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+  
+.theme-toggle-checkbox {
+    display: none;
+}
+  
+.theme-toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background-color: #e5e5e5;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+  
+.theme-toggle-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+  
+.theme-toggle-text {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+  
+.light-text {
+    left: 10px;
+    opacity: 1;
+}
+  
+.dark-text {
+    right: 10px;
+    opacity: 0;
+}
+  
+.theme-toggle-checkbox:checked + .theme-toggle-label {
+    background-color: #2a008b;
+}
+  
+.theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-slider {
+    transform: translateX(50px);
+}
+  
+.theme-toggle-checkbox:checked + .theme-toggle-label .light-text {
+    opacity: 0;
+}
+  
+.theme-toggle-checkbox:checked + .theme-toggle-label .dark-text {
+    opacity: 1;
 }
 
 .carousel-container {
@@ -44,11 +124,13 @@ body.dark {
 
 .carousel {
     display: flex;
-    animation: slide 20s infinite linear;
+    width: 200%;
+    animation: slide 40s linear infinite;
 }
 
 .carousel-item {
-    min-width: 100%;
+    width: 400px;
+    height: 500px;
     object-fit: cover;
     border-radius: 1rem;
     margin: 0 10px;
@@ -58,29 +140,35 @@ body.dark {
     0% {
         transform: translateX(0);
     }
-    12.5% {
+    10% {
         transform: translateX(-100%);
     }
-    25% {
+    20% {
         transform: translateX(-200%);
     }
-    37.5% {
+    30% {
         transform: translateX(-300%);
     }
-    50% {
+    40% {
         transform: translateX(-400%);
     }
-    62.5% {
+    50% {
         transform: translateX(-500%);
     }
-    75% {
+    60% {
         transform: translateX(-600%);
     }
-    87.5% {
+    70% {
         transform: translateX(-700%);
     }
-    100% {
+    80% {
         transform: translateX(-800%);
+    }
+    90% {
+        transform: translateX(-900%);
+    }
+    100% {
+        transform: translateX(-1000%);
     }
 }
 

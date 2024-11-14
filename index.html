@@ -15,8 +15,6 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="/style.css">
 
-
-
 </head>
 <body class="bg-indigo-50 font-['Poppins']">
 
@@ -49,10 +47,15 @@
             <a href="/login.html" class="text-base bg-indigo-950 text-white rounded-full font-semibold py-3 px-8 hover:bg-indigo-800">Sign in</a>
         </div>
         <div class="flex items-center">
-            <button id="theme-toggle" class="text-2xl text-indigo-950 dark:text-white">
-                🌙
-            </button>
-        </div>
+            <div class="theme-toggle-container">
+              <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+              <label for="theme-toggle" class="theme-toggle-label">
+                <span class="theme-toggle-text light-text pl-6"><i class="ph ph-moon"></i></span>
+                <span class="theme-toggle-text dark-text pr-6"><i class="ph ph-sun"></i></span>
+                <span class="theme-toggle-slider"></span>
+              </label>
+            </div>
+          </div>          
     </nav>
     
     <div id="mobile-menu" class="lg:hidden fixed inset-0 bg-indigo-950 bg-opacity-80 z-50 hidden">
@@ -131,54 +134,64 @@
         </div>
     </section>
 
- <section class="franchise max-w-6xl mx-auto pt-24 lg:pt-[50px] px-4 bg-cover bg-center" id="franchise">
-    <div class="flex flex-col lg:flex-row items-center justify-between">
-        
-        <div class="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
-            <img src="https://i.ibb.co.com/0VvHXbX/franchise2-Photoroom.png" width="550" class="rounded-md dark-mode-image" alt="">
-        </div>
-        
-
-        <div class="flex flex-col items-center lg:items-start lg:w-1/2">
-            <h1 class="font-['Clash_Display'] text-indigo-950 text-4xl sm:text-5xl lg:text-[70px] text-bold leading-tight pt-4 lg:pt-10 px-4 lg:px-14 text-center lg:text-left">
-                Franchise<br>
-                <span>Business</span><br>
-                <span>Partnership</span>
-            </h1>
-            <p class="text-base leading-loose text-indigo-950 py-2 px-4 lg:px-14 text-center lg:text-left">
-                We’re thrilled to invite you to explore the possibility of joining our franchise network.<br>
-                As a valued entrepreneur, we believe your skills and passion would be a great fit for our brand.
-            </p>
-            <div class="flex flex-row items-center justify-center lg:justify-start gap-x-3 pt-4 pb-4 sm:pl-0 md:pl-4 lg:pl-14">
-                <a href="#" class="drop-shadow-lg text-lg hover:bg-indigo-950 text-base bg-indigo-800 text-white rounded-full font-semibold py-4 px-10">
-                    Join partnership
-                </a>
+    <section class="franchise max-w-6xl mx-auto pt-24 lg:pt-[50px] px-4 bg-cover bg-center" id="franchise">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+            
+            <div class="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
+                <img src="https://i.ibb.co.com/0VvHXbX/franchise2-Photoroom.png" width="550" class="rounded-md dark-mode-image" alt="">
             </div>
+    
+            <div class="flex flex-col items-center lg:items-start lg:w-1/2">
+                <h1 class="font-['Clash_Display'] text-indigo-950 text-4xl sm:text-5xl lg:text-[70px] text-bold leading-tight pt-4 lg:pt-10 px-4 lg:px-14 text-center lg:text-left">
+                    Franchise<br>
+                    <span>Business</span><br>
+                    <span>Partnership</span>
+                </h1>
+                <p class="text-base leading-loose text-indigo-950 py-2 px-4 lg:px-14 text-center lg:text-left">
+                    We’re thrilled to invite you to explore the possibility of joining our franchise network.<br>
+                    As a valued entrepreneur, we believe your skills and passion would be a great fit for our brand.
+                </p>
+                <div class="flex flex-row items-center justify-center lg:justify-start gap-x-3 pt-4 pb-4 sm:pl-0 md:pl-4 lg:pl-14">
+                    <a href="#" class="drop-shadow-lg text-lg hover:bg-indigo-950 text-base bg-indigo-800 text-white rounded-full font-semibold py-4 px-10">
+                        Join partnership
+                    </a>
+                </div>
+            </div>
+            
         </div>
-        
-    </div>
-</section>
+    </section>
+    
 
     
-<section class="gallery mx-auto pt-12 bg-cover bg-center bg-no-repeat" id="gallery" style="background-image: url('Assets/Screenshot from 2024-11-09 00-34-42.png');">
-    <h3 class="text-white text-5xl font-['Clash_Display'] text-center">Gallery</h3>
-    <div class="p-5 sm:p-10">
-        <div class="carousel-container">
-            <div class="carousel w-[400px] h-[500px]">
-                <img src="/Assets/bproject1.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-1">
-                <img src="/Assets/bproject2.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-2">
-                <img src="/Assets/bproject3.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-3">
-                <img src="/Assets/bproject4.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-4">
-                <img src="/Assets/bproject5.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-5">
-                <img src="/Assets/bproject6.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-6">
-                <img src="/Assets/bproject7.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-7">
-                <img src="/Assets/bproject8.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-8">
+    <section class="gallery mx-auto pt-12 bg-cover bg-center bg-no-repeat" id="gallery" style="background-image: url('Assets/Screenshot from 2024-11-09 00-34-42.png');">
+        <h3 class="text-white text-5xl font-['Clash_Display'] text-center">Gallery</h3>
+        <div class="p-5 sm:p-10">
+            <div class="carousel-container">
+                <div class="carousel w-[400px] h-[500px]">
+
+                    <img src="/Assets/bproject1.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-1">
+                    <img src="/Assets/bproject2.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-2">
+                    <img src="/Assets/bproject3.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-3">
+                    <img src="/Assets/bproject4.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-4">
+                    <img src="/Assets/bproject5.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-5">
+                    <img src="/Assets/bproject6.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-6">
+                    <img src="/Assets/bproject7.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-7">
+                    <img src="/Assets/bproject8.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-8">
+                    
+                    <img src="/Assets/bproject1.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-1">
+                    <img src="/Assets/bproject2.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-2">
+                    <img src="/Assets/bproject3.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-3">
+                    <img src="/Assets/bproject4.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-4">
+                    <img src="/Assets/bproject5.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-5">
+                    <img src="/Assets/bproject6.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-6">
+                    <img src="/Assets/bproject7.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-7">
+                    <img src="/Assets/bproject8.avif" class="carousel-item rounded-2xl hover:border-2 hover:border-indigo-800 ease-out duration-300 p-2" alt="gallery-8">
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-
+    </section>
+    
+    
     <section class="testimoni max-w-6xl mx-auto py-12 z-20 relative" id="testimoni">
         <h3 class="text-indigo-950 text-5xl font-['Clash_Display'] text-center pb-7">Testimonial</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-indigo-800 rounded-xl">
@@ -248,7 +261,8 @@
             ©Copypasta.id Since 2024™
         </h3>
     </footer>
-    </body>
+    
     <script src="/script.js"></script>
+    </body>
     </html>
     
