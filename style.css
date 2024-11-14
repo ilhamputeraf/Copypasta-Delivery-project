@@ -35,3 +35,55 @@ body.dark {
 .dark .bg-indigo-200 {
     background-color: #555555;
 }
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    animation: slide 20s infinite linear;
+}
+
+.carousel-item {
+    min-width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin: 0 10px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    12.5% {
+        transform: translateX(-100%);
+    }
+    25% {
+        transform: translateX(-200%);
+    }
+    37.5% {
+        transform: translateX(-300%);
+    }
+    50% {
+        transform: translateX(-400%);
+    }
+    62.5% {
+        transform: translateX(-500%);
+    }
+    75% {
+        transform: translateX(-600%);
+    }
+    87.5% {
+        transform: translateX(-700%);
+    }
+    100% {
+        transform: translateX(-800%);
+    }
+}
+
+.carousel-container:hover .carousel {
+    animation-play-state: paused;
+}
