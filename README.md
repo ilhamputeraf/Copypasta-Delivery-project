@@ -67,4 +67,4 @@ Make sure your website is ready to go. You should have:
 
 <img src="Assets/Finish.png">
 
-If you intrested seeing my own website you can click this link : www.copypasta-delevery.site
+If you intrested seeing my own website you can click this link : https://copypasta-delevery.site
